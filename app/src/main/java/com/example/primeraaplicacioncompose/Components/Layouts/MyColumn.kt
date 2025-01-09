@@ -1,9 +1,13 @@
 package com.example.primeraaplicacioncompose.Components.Layouts
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -19,7 +23,7 @@ fun myColum(modifier: Modifier = Modifier) {
 
     Column(
         modifier = modifier
-            .fillMaxSize()
+            .fillMaxHeight()
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.SpaceEvenly,
     ) {
@@ -48,6 +52,21 @@ fun myColum(modifier: Modifier = Modifier) {
 
 
     }
+}
 
-
+@Composable
+fun myRow(modifier: Modifier) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+        , horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        for (i in 1..100) {
+            Text(
+                "Diego " + i, modifier = Modifier
+                    .background(Color.Green)
+            )
+        }
+    }
 }
