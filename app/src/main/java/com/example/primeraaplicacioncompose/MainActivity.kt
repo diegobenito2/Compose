@@ -20,6 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial1
 import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial2
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial3
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial4
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 import com.example.primeraaplicacioncompose.Components.Layouts.myColum
 import com.example.primeraaplicacioncompose.Components.Layouts.myRow
@@ -45,9 +47,11 @@ class MainActivity : ComponentActivity() {
                     myBox2()
                     myColum()
                     myRow(modifier = Modifier.padding(innerPadding))*/
-                    //Tutorial1("Hola esto es el tutorial 1","From Diego", modifier = Modifier.padding(innerPadding))
+                    //Tutorial1("Hola esto es el tutorial4_0 1","From Diego", modifier = Modifier.padding(innerPadding))
+//                    Tutorial2()
+//                    tutorial3()
+                    tutorial4()
                 }
-                    Tutorial2()
             }
         }
     }
