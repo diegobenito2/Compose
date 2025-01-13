@@ -21,7 +21,7 @@ import com.example.primeraaplicacioncompose.R
 fun Tutorial2() {
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Image(painter = painterResource(R.drawable.bg_compose_background),"Imagen",Modifier.fillMaxWidth())
+        Image(painter = painterResource(R.drawable.bg_compose_background),"Imagen",Modifier.fillMaxWidth().padding(bottom = 8.dp))
         Text(
             "JetPack Compose Tutorial",
             Modifier
