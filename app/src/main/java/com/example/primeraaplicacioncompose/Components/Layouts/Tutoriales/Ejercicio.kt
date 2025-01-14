@@ -5,9 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
@@ -16,7 +14,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-
+import com.example.primeraaplicacioncompose.Spacer
+@Composable
+fun Ejercicio01(modifier: Modifier){
+    Ejercicio1()
+}
 @Preview(showBackground = true)
 @Composable
 fun Ejercicio1() {
@@ -39,6 +41,7 @@ fun Ejercicio1() {
                 Text("Ejercicio 1")
             }
         }
+        Spacer(16)
         Row(Modifier.weight(1f)) {
             Box(
                 Modifier
@@ -71,22 +74,16 @@ fun Ejercicio1() {
                 }
             }
         }
+        Spacer(16)
         Box(
             Modifier
                 .weight(1f)
                 .fillMaxSize()
-                .background(Color.Yellow)
+                .background(Color.Yellow),
+            contentAlignment = Alignment.Center
 
         ) {
-            Column(
-                Modifier.align(Alignment.Center),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-
-                Text("Ejercicio 4")
-            }
-
+            Text("Ejercicio 4")
         }
     }
 }

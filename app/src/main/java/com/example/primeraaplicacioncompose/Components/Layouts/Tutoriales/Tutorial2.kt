@@ -18,7 +18,7 @@ import com.example.primeraaplicacioncompose.R
 
 @Preview (showBackground = true)
 @Composable
-fun Tutorial2() {
+fun Tutorial2(modifier: Modifier) {
 
     Column(modifier = Modifier.fillMaxSize()) {
         Image(painter = painterResource(R.drawable.bg_compose_background),"Imagen",Modifier.fillMaxWidth().padding(bottom = 8.dp))

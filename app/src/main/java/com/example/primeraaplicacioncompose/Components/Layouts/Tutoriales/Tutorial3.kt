@@ -18,7 +18,7 @@ import com.example.primeraaplicacioncompose.R
 
 @Preview(showBackground = true)
 @Composable
-fun tutorial3() {
+fun tutorial3(modifier: Modifier) {
     tutorial3_0()
 }
 
