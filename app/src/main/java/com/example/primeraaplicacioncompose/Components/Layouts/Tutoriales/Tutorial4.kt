@@ -18,12 +18,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@Preview(showBackground = true)
 @Composable
 fun tutorial4(modifier: Modifier) {
     tutorial4_0()
 }
 
+@Preview(showBackground = true)
 @Composable
 fun tutorial4_0() {
     Column(Modifier.fillMaxSize()) {

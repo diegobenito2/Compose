@@ -15,10 +15,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.primeraaplicacioncompose.R
+@Composable
+fun Tutorial2(modifier: Modifier){
+    Tutorial02()
+}
 
 @Preview (showBackground = true)
 @Composable
-fun Tutorial2(modifier: Modifier) {
+fun Tutorial02() {
 
     Column(modifier = Modifier.fillMaxSize()) {
         Image(painter = painterResource(R.drawable.bg_compose_background),"Imagen",Modifier.fillMaxWidth().padding(bottom = 8.dp))

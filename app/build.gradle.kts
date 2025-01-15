@@ -40,7 +40,10 @@ android {
 }
 
 dependencies {
-
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.0") // Verifica la versión
+    implementation ("androidx.compose.ui:ui:1.0.0") // Verifica la versión
+    implementation ("androidx.compose.material:material:1.0.0") // Verifica la versión
+    implementation ("androidx.compose.ui:ui-tooling:1.0.0") // Verifica la versión
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -50,6 +53,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.constraint.layout)
+    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

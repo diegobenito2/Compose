@@ -16,22 +16,26 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.primeraaplicacioncompose.R
 
-@Preview(showBackground = true)
 @Composable
 fun tutorial3(modifier: Modifier) {
     tutorial3_0()
 }
 
+@Preview(showBackground = true)
 @Composable
 fun tutorial3_0() {
-    Column(modifier = Modifier.fillMaxSize(), Arrangement.Center,Alignment.CenterHorizontally) {
+    Column(modifier = Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
 
         Image(
             painter = painterResource(R.drawable.ic_task_completed),
             "Imagen",
-            Modifier,
+            
+            )
+        Text(
+            "All tasks completed",
+            Modifier.padding(0.dp, 20.dp, 8.dp, 0.dp),
+            fontWeight = FontWeight.Bold
         )
-        Text("All tasks completed",Modifier.padding(0.dp,20.dp,8.dp,0.dp), fontWeight = FontWeight.Bold )
         Text("Nice work!", fontSize = 16.sp)
     }
 }

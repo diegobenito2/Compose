@@ -18,13 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial2
-import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial3
-import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial4
-import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Ejercicio01
-import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial1
-import com.example.primeraaplicacioncompose.Components.Layouts.myColum
-import com.example.primeraaplicacioncompose.Components.Layouts.myRow
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejemplo1
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio1Constraint
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio2Constraint
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -52,7 +48,10 @@ class MainActivity : ComponentActivity() {
 //                    Tutorial2(modifier = Modifier.padding(innerPadding))
 //                    tutorial3(modifier = Modifier.padding(innerPadding))
 //                    tutorial4(modifier = Modifier.padding(innerPadding))
-                    Ejercicio01(modifier = Modifier.padding(innerPadding))
+//                    Ejemplo1(modifier = Modifier.padding(innerPadding))
+//                    Ejercicio1Constraint(modifier = Modifier.padding(innerPadding))
+                    Ejercicio2Constraint(modifier = Modifier.padding(innerPadding))
+
 
                 }
             }
