@@ -18,9 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejemplo1
-import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio1Constraint
-import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio2Constraint
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -50,7 +47,8 @@ class MainActivity : ComponentActivity() {
 //                    tutorial4(modifier = Modifier.padding(innerPadding))
 //                    Ejemplo1(modifier = Modifier.padding(innerPadding))
 //                    Ejercicio1Constraint(modifier = Modifier.padding(innerPadding))
-                    Ejercicio2Constraint(modifier = Modifier.padding(innerPadding))
+//                    Ejercicio2Constraint(modifier = Modifier.padding(innerPadding))
+                    ejemplo2Estado(modifier = Modifier.padding(innerPadding))
 
 
                 }
