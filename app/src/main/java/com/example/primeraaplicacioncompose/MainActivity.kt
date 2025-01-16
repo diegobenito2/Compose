@@ -4,23 +4,30 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial1
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial2
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial3
+import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial4
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejemplo1
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio1Constraint
+import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejercicio2Constraint
+import com.example.primeraaplicacioncompose.Components.Layouts.myColum
+import com.example.primeraaplicacioncompose.Components.Layouts.myRow
+import com.example.primeraaplicacioncompose.Text.ejemplosTexto
+import com.example.primeraaplicacioncompose.Text.greeting
+import com.example.primeraaplicacioncompose.Text.mytext
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,97 +35,71 @@ class MainActivity : ComponentActivity() {
             PrimeraAplicacionComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-//                    greeting(
-//                        name = "Diego",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                    mytext(
-//                        "Hola mundo", Modifier
-//                            .padding(25.dp)
-//                            .fillMaxWidth()
-//                            .background(Color.Green)
-//                    )
-//                    myBox2()
-//                    myColum()
-//                    myRow(modifier = Modifier.padding(innerPadding))
-//                    Tutorial1("Hola esto es el tutorial4_0 1","From Diego", modifier = Modifier.padding(innerPadding))
-//                    Tutorial2(modifier = Modifier.padding(innerPadding))
-//                    tutorial3(modifier = Modifier.padding(innerPadding))
-//                    tutorial4(modifier = Modifier.padding(innerPadding))
-//                    Ejemplo1(modifier = Modifier.padding(innerPadding))
-//                    Ejercicio1Constraint(modifier = Modifier.padding(innerPadding))
-//                    Ejercicio2Constraint(modifier = Modifier.padding(innerPadding))
-                    ejemplo2Estado(modifier = Modifier.padding(innerPadding))
-
-
+                    menu(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
-}
 
-@Composable
-fun greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Composable
-fun mytext(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text = text,
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun mytext() {
-    mytext(
-        "Adios", Modifier
-            .padding(25.dp)
-            .fillMaxWidth()
-            .background(Color.Green)
-    )
-    mytext(
-        "Hola",
-        Modifier
-            .background(Color.Green)
-            .fillMaxWidth()
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun greetingPreview() {
-    PrimeraAplicacionComposeTheme {
-        greeting("Diego")
-    }
-}
-
-@Composable
-fun myBox1() {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Box(
-            modifier = Modifier
-                .size(50.dp)
-                .background(Color.Red)
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun myBox2() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Box(
-            modifier = Modifier
-                .size(50.dp)
-                .background(Color.Red), contentAlignment = Alignment.BottomEnd
+    @Composable
+    fun menu(modifier: Modifier) {
+        Column(
+            modifier
         ) {
-            Text(text = "Hola")
+            Button(onClick = {
+                greeting(
+                    name = "Diego",
+                    modifier = modifier
+                )
+            }) {
+                Text("Saludo")
+            }
+            
+            Button(onClick = { mytext() }) {
+                Text("Texto personalizado")
+            }
+            Button(onClick = { myColum() }) {
+                Text("Ejecutar myColum")
+            }
+            Button(onClick = { myRow(modifier = modifier) }) {
+                Text("Ejecutar myRow")
+            }
+            Button(onClick = {
+                Tutorial1(
+                    "Hola esto es el tutorial4_0 1",
+                    "From Diego",
+                    modifier = modifier
+                )
+            }) {
+                Text("Tutorial 1")
+            }
+            Button(onClick = { Tutorial2(modifier = modifier) }) {
+                Text("Tutorial 2")
+            }
+            Button(onClick = { tutorial3(modifier = modifier) }) {
+                Text("Tutorial 3")
+            }
+            Button(onClick = { tutorial4(modifier = modifier) }) {
+                Text("Tutorial 4")
+            }
+            Button(onClick = { Ejemplo1(modifier = modifier) }) {
+                Text("Ejemplo 1 Constraint")
+            }
+            Button(onClick = { Ejercicio1Constraint(modifier = modifier) }) {
+                Text("Ejercicio 1 Constraint")
+            }
+            Button(onClick = { Ejercicio2Constraint(modifier = modifier) }) {
+                Text("Ejercicio 2 Constraint")
+            }
+            Button(onClick = { ejemplo1Estado(modifier = modifier) }) {
+                Text("Ejemplo 1 Estado")
+            }
+            Button(onClick = { ejemplo2Estado(modifier = modifier) }) {
+                Text("Ejemplo 2 Estado")
+            }
+            Button(onClick = { ejemplosTexto(modifier)}) { }
+
         }
     }
 }
