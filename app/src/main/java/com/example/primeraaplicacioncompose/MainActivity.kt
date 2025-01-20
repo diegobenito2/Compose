@@ -22,7 +22,10 @@ import com.example.primeraaplicacioncompose.Components.Layouts.constraint.Ejerci
 import com.example.primeraaplicacioncompose.Components.Layouts.myColum
 import com.example.primeraaplicacioncompose.Components.Layouts.myRow
 import com.example.primeraaplicacioncompose.Text.ejemplosTexto
-import com.example.primeraaplicacioncompose.Text.greeting
+import com.example.primeraaplicacioncompose.Text.Greeting
+import com.example.primeraaplicacioncompose.Text.contraseñaTextField
+import com.example.primeraaplicacioncompose.Text.ejemploTextField
+import com.example.primeraaplicacioncompose.Text.email
 import com.example.primeraaplicacioncompose.Text.mytext
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 
@@ -34,72 +37,74 @@ class MainActivity : ComponentActivity() {
         setContent {
             PrimeraAplicacionComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
-                    menu(modifier = Modifier.padding(innerPadding))
+//                    ejemploTextField(modifier = Modifier.padding(innerPadding))
+//                    contraseñaTextField(modifier=Modifier.padding(innerPadding))
+//                    menu(modifier = Modifier.padding(innerPadding))
+                    email(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 
 
-    @Composable
-    fun menu(modifier: Modifier) {
-        Column(
-            modifier
-        ) {
-            Button(onClick = {
-                greeting(
-                    name = "Diego",
-                    modifier = modifier
-                )
-            }) {
-                Text("Saludo")
-            }
-            
-            Button(onClick = { mytext() }) {
-                Text("Texto personalizado")
-            }
-            Button(onClick = { myColum() }) {
-                Text("Ejecutar myColum")
-            }
-            Button(onClick = { myRow(modifier = modifier) }) {
-                Text("Ejecutar myRow")
-            }
-            Button(onClick = {
-                Tutorial1(
-                    "Hola esto es el tutorial4_0 1",
-                    "From Diego",
-                    modifier = modifier
-                )
-            }) {
-                Text("Tutorial 1")
-            }
-            Button(onClick = { Tutorial2(modifier = modifier) }) {
-                Text("Tutorial 2")
-            }
-            Button(onClick = { tutorial3(modifier = modifier) }) {
-                Text("Tutorial 3")
-            }
-            Button(onClick = { tutorial4(modifier = modifier) }) {
-                Text("Tutorial 4")
-            }
-            Button(onClick = { Ejemplo1(modifier = modifier) }) {
-                Text("Ejemplo 1 Constraint")
-            }
-            Button(onClick = { Ejercicio1Constraint(modifier = modifier) }) {
-                Text("Ejercicio 1 Constraint")
-            }
-            Button(onClick = { Ejercicio2Constraint(modifier = modifier) }) {
-                Text("Ejercicio 2 Constraint")
-            }
-            Button(onClick = { ejemplo1Estado(modifier = modifier) }) {
-                Text("Ejemplo 1 Estado")
-            }
-            Button(onClick = { ejemplo2Estado(modifier = modifier) }) {
-                Text("Ejemplo 2 Estado")
-            }
-            Button(onClick = { ejemplosTexto(modifier)}) { }
-
-        }
-    }
+//    @Composable
+//    fun menu(modifier: Modifier) {
+//        Column(
+//            modifier
+//        ) {
+//            Button(onClick = {
+//                Greeting(
+//                    name = "Diego",
+//                    modifier = modifier
+//                )
+//            }) {
+//                Text("Saludo")
+//            }
+//
+//            Button(onClick = { mytext()}) {
+//                Text("Texto personalizado")
+//            }
+//            Button(onClick = { myColum() }) {
+//                Text("Ejecutar myColum")
+//            }
+//            Button(onClick = { myRow(modifier = modifier) }) {
+//                Text("Ejecutar myRow")
+//            }
+//            Button(onClick = {
+//                Tutorial1(
+//                    "Hola esto es el tutorial4_0 1",
+//                    "From Diego",
+//                    modifier = modifier
+//                )
+//            }) {
+//                Text("Tutorial 1")
+//            }
+//            Button(onClick = { Tutorial2(modifier = modifier) }) {
+//                Text("Tutorial 2")
+//            }
+//            Button(onClick = { tutorial3(modifier = modifier) }) {
+//                Text("Tutorial 3")
+//            }
+//            Button(onClick = { tutorial4(modifier = modifier) }) {
+//                Text("Tutorial 4")
+//            }
+//            Button(onClick = { Ejemplo1(modifier = modifier) }) {
+//                Text("Ejemplo 1 Constraint")
+//            }
+//            Button(onClick = { Ejercicio1Constraint(modifier = modifier) }) {
+//                Text("Ejercicio 1 Constraint")
+//            }
+//            Button(onClick = { Ejercicio2Constraint(modifier = modifier) }) {
+//                Text("Ejercicio 2 Constraint")
+//            }
+//            Button(onClick = { ejemplo1Estado(modifier = modifier) }) {
+//                Text("Ejemplo 1 Estado")
+//            }
+//            Button(onClick = { ejemplo2Estado(modifier = modifier) }) {
+//                Text("Ejemplo 2 Estado")
+//            }
+//            Button(onClick = { ejemplosTexto(modifier) }) { }
+//
+//        }
+//    }
 }

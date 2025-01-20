@@ -1,6 +1,5 @@
 package com.example.primeraaplicacioncompose.Text
 
-import android.text.Layout.Alignment
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -23,12 +22,12 @@ import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeThe
 @Composable
 fun greetingPreview() {
     PrimeraAplicacionComposeTheme {
-        greeting("Diego")
+        Greeting("Diego")
     }
 }
 
 @Composable
-fun greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
