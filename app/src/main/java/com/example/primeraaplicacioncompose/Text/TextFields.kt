@@ -117,27 +117,26 @@ fun email(modifier: Modifier) {
                     imageVector = Icons.Default.Email,
                     contentDescription = "Email icon"
                 )
-            },
-            trailingIcon = {
+            }, trailingIcon = {
 
                 Icon(
                     imageVector = Icons.Default.Check,
                     contentDescription = "Check icon"
                 )
 
-            },
-            supportingText = { "00000" },
+            }, supportingText = { "00000" },
             singleLine = true,
             maxLines = 1,
             minLines = 0,
             keyboardOptions = KeyboardOptions.Default,
-            colors = TextFieldDefaults.textFieldColors(
+            colors = androidx.compose.material3.TextFieldDefaults.colors(
                 Color(0xFFF5F5F5),
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent
-            ),
-            shape = RoundedCornerShape(8.dp)
+            )
+
         )
+
     }
 }
 
