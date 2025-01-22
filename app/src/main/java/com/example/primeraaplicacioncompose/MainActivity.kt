@@ -12,6 +12,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.primeraaplicacioncompose.Button.botones
+import com.example.primeraaplicacioncompose.Coil.coil
 import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial1
 import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.Tutorial2
 import com.example.primeraaplicacioncompose.Components.Layouts.Tutoriales.tutorial3
@@ -27,6 +29,9 @@ import com.example.primeraaplicacioncompose.Text.contraseñaTextField
 import com.example.primeraaplicacioncompose.Text.ejemploTextField
 import com.example.primeraaplicacioncompose.Text.email
 import com.example.primeraaplicacioncompose.Text.mytext
+import com.example.primeraaplicacioncompose.imagenes.ImagenContentScaleFit
+import com.example.primeraaplicacioncompose.imagenes.SquashedOval
+import com.example.primeraaplicacioncompose.imagenes.myImage
 import com.example.primeraaplicacioncompose.ui.theme.PrimeraAplicacionComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,6 +47,12 @@ class MainActivity : ComponentActivity() {
 //                    email(modifier = Modifier.padding(innerPadding))
 //                    funcionesComposable(modifier = Modifier.padding(innerPadding))
 //                    elevacionDeEstado(modifier = Modifier.padding(innerPadding))
+//                    botones(modifier = Modifier.padding(innerPadding))
+//                    myImage(modifier = Modifier.padding(innerPadding))
+//                    ImagenContentScaleFit(modifier = Modifier.padding(innerPadding))
+                    coil(modifier = Modifier.padding(innerPadding))
+
+
                 }
             }
         }

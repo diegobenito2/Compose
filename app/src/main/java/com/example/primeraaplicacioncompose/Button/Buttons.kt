@@ -18,10 +18,20 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.motion.widget.MotionScene.Transition.TransitionOnClick
 
 @Composable
-fun myButton(modifier: Modifier) {
+fun botones(modifier: Modifier) {
+    Column(modifier) {
+        mybutton(modifier)
+        mybutton2(modifier)
+        mybutton3(modifier)
+        mybutton4(modifier)
+        mybutton5(modifier)
+    }
+}
+
+@Composable
+fun mybutton(modifier: Modifier) {
     Column(
         modifier
             .fillMaxSize()
@@ -74,7 +84,7 @@ fun mybutton3(modifier: Modifier) {
 }
 
 @Composable
-fun myButton4(modifier: Modifier) {
+fun mybutton4(modifier: Modifier) {
     var enabled by rememberSaveable { mutableStateOf(true) }
 
     OutlinedButton(
@@ -88,7 +98,7 @@ fun myButton4(modifier: Modifier) {
 }
 
 @Composable
-fun myButton5(modifier: Modifier) {
+fun mybutton5(modifier: Modifier) {
     var enabled by rememberSaveable { mutableStateOf(true) }
 
     TextButton(
