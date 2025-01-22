@@ -1,14 +1,41 @@
 package com.example.primeraaplicacioncompose.Coil
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 
 @Composable
-fun coil(modifier: Modifier){
-    AsyncImage(
-        model = "https://www.google.com/imgres?q=pogacar&imgurl=https%3A%2F%2Fwww.ciclismoafondo.es%2Fuploads%2Fs1%2F13%2F88%2F14%2F27%2Fpoga-ai.jpeg&imgrefurl=https%3A%2F%2Fwww.ciclismoafondo.es%2Fnoticias%2Ftodo-quiere-ganar-pogacar-en-2025_304149_102.html&docid=MoHaRmOCCNqCnM&tbnid=vEg5RV2qAEfZ4M&vet=12ahUKEwjojaOGqYmLAxWWRKQEHYTcG5EQM3oECHkQAA..i&w=2000&h=1333&hcb=2&ved=2ahUKEwjojaOGqYmLAxWWRKQEHYTcG5EQM3oECHkQAA",
-        contentDescription = null,
-    )
+fun coil(modifier: Modifier) {
+    Column(modifier.fillMaxSize()) {
+        AsyncImage(
+            model = "https://loremflickr.com/320/240",
+            contentDescription = null, Modifier
+                .fillMaxWidth().height(200.dp)
+                .padding(top = 16.dp), contentScale = ContentScale.Crop
+        )
+
+        Text("Title 1", Modifier
+            .fillMaxWidth()
+            .height(50.dp)
+            .background(Color.Cyan).align(Alignment.CenterHorizontally).padding(15.dp), fontWeight = FontWeight.Medium, textAlign = TextAlign.Center)
+    }
+
+
 }
 
