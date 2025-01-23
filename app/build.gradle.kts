@@ -39,13 +39,19 @@ android {
     }
 }
 
+
+
 dependencies {
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.0") // Verifica la versión
     implementation ("androidx.compose.ui:ui:1.0.0") // Verifica la versión
     implementation ("androidx.compose.material:material:1.0.0") // Verifica la versión
     implementation ("androidx.compose.ui:ui-tooling:1.0.0") // Verifica la versión
+    //Coil
     implementation("io.coil-kt.coil3:coil-compose:3.0.4")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
+    //Fin Coil
+
+    implementation ("androidx.compose.material:material-icons-extended") //Libreria de iconos
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
