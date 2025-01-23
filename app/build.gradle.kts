@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.primeraaplicacioncompose"
+    namespace = "com.example.compose"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.primeraaplicacioncompose"
+        applicationId = "com.example.compose"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -39,13 +39,8 @@ android {
     }
 }
 
-
-
 dependencies {
-    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.0") // Verifica la versión
-    implementation ("androidx.compose.ui:ui:1.0.0") // Verifica la versión
-    implementation ("androidx.compose.material:material:1.0.0") // Verifica la versión
-    implementation ("androidx.compose.ui:ui-tooling:1.0.0") // Verifica la versión
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.0")
     //Coil
     implementation("io.coil-kt.coil3:coil-compose:3.0.4")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
@@ -60,8 +55,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.constraint.layout)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
