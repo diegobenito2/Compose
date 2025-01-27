@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.primeraaplicacioncompose.CalculadoraCompose.calculadora
 import com.example.primeraaplicacioncompose.Coil.coil
 import com.example.primeraaplicacioncompose.Iconos.icono
 import com.example.primeraaplicacioncompose.ProgressBar.progressbar
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
 //                    ImagenContentScaleFit(modifier = Modifier.padding(innerPadding))
 //                    coil(modifier = Modifier.padding(innerPadding))
 //                    icono(modifier = Modifier.padding(innerPadding))
-                    progressbar(modifier = Modifier.padding(innerPadding))
+//                    progressbar(modifier = Modifier.padding(innerPadding))
+                    calculadora(modifier = Modifier.padding(innerPadding))
 
 
                 }
