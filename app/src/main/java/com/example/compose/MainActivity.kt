@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.compose.Componentes.Barrier.EjerciciosBarrier
+import com.example.compose.Componentes.CheckBox.pruebasCheckBox
 import com.example.compose.Componentes.ProgressBar.progressbar
 import com.example.compose.Iconos.icono
 import com.example.compose.ui.theme.ComposeTheme
@@ -31,9 +32,10 @@ class MainActivity : ComponentActivity() {
 //                    Box(modifier = Modifier.padding(innerPadding))
 //                    botones(modifier = Modifier.padding(innerPadding))
 //                    coil(modifier = Modifier.padding(innerPadding))
-                    icono(modifier = Modifier.padding(innerPadding))
+//                    icono(modifier = Modifier.padding(innerPadding))
 //                    EjerciciosBarrier(modifier = Modifier.padding(innerPadding))
 //                    progressbar(modifier = Modifier.padding(innerPadding))
+                    pruebasCheckBox(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
