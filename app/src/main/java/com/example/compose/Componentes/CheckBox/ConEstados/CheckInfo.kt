@@ -1,4 +1,4 @@
-package com.example.compose.Componentes.Estados
+package com.example.compose.Componentes.CheckBox.ConEstados
 
 data class CheckInfo(
     val title: String,
