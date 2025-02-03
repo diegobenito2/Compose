@@ -27,65 +27,6 @@ fun radioButtons(modifier: Modifier) {
         radiobuttonlist(selectedOption, lenguajesProg, { selectedOption = it })
     }
 }
-
-@Composable
-fun radiobuttonlistciclos(
-    selectedCiclo: String,
-    options: List<String>,
-    onOptionSelected: (String) -> Unit
-) {
-    options.forEach { option ->
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            RadioButton(
-                selected = selectedCiclo == option,
-                onClick = { onOptionSelected(option) })
-            Text(text = option)
-        }
-        seleccionModulos(selectedCiclo)
-    }
-}
-
-@Composable
-fun seleccionModulos(
-    selectedOption: String
-) {
-    val modulos = when (selectedOption) {
-        "DAW" -> listOf(
-            "Desarrollo web en entorno cliente",
-            "Desarrollo web en entorno servidor",
-            "Despliegue de aplicaciones web",
-            "Diseño de interfaces web",
-            "Proyecto de desarrollo de aplicaciones web"
-        )
-
-        "DAM" -> listOf(
-            "Acceso a datos",
-            "Desarrollo de interfaces",
-            "Programación multimedia y dispositivos móviles",
-            "Programación de servicios y procesos",
-            "Sistemas de gestión empresarial"
-        )
-
-        "ASIR" -> listOf(
-            "Servicios de red e Internet",
-            "Implantación de aplicaciones web.",
-            "Administración de sistemas gestores de bases de datos",
-            "Seguridad y alta disponibilidad",
-            "Proyecto de administración de sistemas informáticos en red"
-        )
-
-        else -> emptyList()
-    }
-    modulos.forEach({ modulo ->
-var estado = mutableStateListOf(false,false,false,false,false)
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Checkbox(checked = )
-        }
-        Text(text = modulo)
-
-    })
-}
-
 @Composable
 fun MyRadioButton() {
 
