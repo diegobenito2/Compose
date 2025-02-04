@@ -17,6 +17,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import com.example.compose.Componentes.Card.EjemploCard
+import com.example.compose.Componentes.Card.ejercicioCardView
 import com.example.compose.Componentes.CheckBox.ConEstados.MyTriStateCheckbox
 import com.example.compose.Componentes.RadioButton.MyRadioButton
 import com.example.compose.Componentes.RadioButton.radioButtons
@@ -46,12 +48,15 @@ class MainActivity : ComponentActivity() {
                     //  MyTriStateCheckbox(modifier = Modifier.padding(innerPadding)) //Uso del triple estado de un checkbox padre que dependiendo de su estado actuan los hijos.
 //                    radioButtons(modifier = Modifier.padding(innerPadding))
 //                    trescheckboxIndependientes(modifier = Modifier.padding(innerPadding))
-                    Column(modifier = Modifier.padding(innerPadding)) {
-                        Text("Matriculación Ciclos")
-                        val cicloselected = listOf("DAW", "DAM", "ASIR")
-                        var selectedCiclo by remember { mutableStateOf("DAW") }
-                        radiobuttonlistciclos(selectedCiclo, cicloselected, { selectedCiclo = it })
-                    }
+//                    EjemploCard(Modifier.padding(innerPadding))
+//                    Column(modifier = Modifier.padding(innerPadding)) {
+//                        Text("Matriculación Ciclos")
+//                        val cicloselected = listOf("DAW", "DAM", "ASIR")
+//                        var selectedCiclo by remember { mutableStateOf("DAW") }
+//                        radiobuttonlistciclos(selectedCiclo, cicloselected, { selectedCiclo = it })
+//                    }
+                    ejercicioCardView(Modifier.padding(innerPadding))
+
 
                 }
             }
