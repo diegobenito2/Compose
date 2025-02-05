@@ -4,6 +4,7 @@ package com.example.compose.Componentes.Card
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -121,56 +122,42 @@ fun ejercicioCardView(modifier: Modifier) {
                         Modifier.weight(1f),
                         horizontalArrangement = Arrangement.End
                     ) {
-                        var ciclable by rememberSaveable { mutableStateOf(false) }
                         var contador by rememberSaveable { mutableIntStateOf(0) }
 
-                   
-                        IconButton(
-                            onClick = {
-                                ciclable = true
-                                contador += 1
-                            },
-                            modifier = Modifier.background(Color.Transparent)
+                        Row(
+                            Modifier.padding(end = 16.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            if (ciclable) {
-                                BadgedBox(
-                                    badge = { Badge { Text(contador.toString()) } },
-                                    modifier = Modifier,
-                                    content = {
-                                        Icon(
-                                            painter = painterResource(id = R.drawable.me_gusta),
-                                            contentDescription = "Me Gusta",
-                                            Modifier.size(24.dp),
-                                            tint = Color.Red
-                                        )
+                            BadgedBox(
+                                badge = {
+                                    if (contador > 0) {
+                                        Badge { Text(contador.toString()) }
                                     }
-                                )
-                            } else {
+                                }
+                            ) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.me_gusta),
                                     contentDescription = "Me Gusta",
-                                    Modifier.size(24.dp),  // Consistent size
-                                    tint = Color.Black
+                                    modifier = Modifier
+                                        .size(30.dp)
+                                        .clickable {
+                                            contador += 1
+                                        },
+                                    tint = if (contador > 0) Color.Red else Color.Black
                                 )
                             }
                         }
 
-                        // Compartir (Share) button
-                        IconButton(
-                            onClick = {
-                                // Implement share functionality here
-                            },
-                            modifier = Modifier.background(Color.Transparent)
-                        ) {
-                            Icon(
-                                painter = painterResource(id = R.drawable.la),
-                                contentDescription = "Compartir",
-                                Modifier.size(24.dp)  // Consistent size
-                            )
-                        }
+                        Icon(
+                            painter = painterResource(id = R.drawable.la),
+                            contentDescription = "Compartir",
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clickable {
+                                    // Implementar funcionalidad de compartir aquí
+                                }
+                        )
                     }
-
-
 
 
                 }

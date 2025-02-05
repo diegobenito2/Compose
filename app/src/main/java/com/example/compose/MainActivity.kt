@@ -20,10 +20,13 @@ import androidx.compose.ui.unit.sp
 import com.example.compose.Componentes.Card.EjemploCard
 import com.example.compose.Componentes.Card.ejercicioCardView
 import com.example.compose.Componentes.CheckBox.ConEstados.MyTriStateCheckbox
+import com.example.compose.Componentes.DropDownMenu.ejercicioMenuDesplegable
+import com.example.compose.Componentes.DropDownMenu.myDropDownMenu
 import com.example.compose.Componentes.RadioButton.MyRadioButton
 import com.example.compose.Componentes.RadioButton.radioButtons
 import com.example.compose.Componentes.RadioButton.radiobuttonlist
 import com.example.compose.Componentes.RadioButton.radiobuttonlistciclos
+import com.example.compose.Surface.mySurface
 import com.example.compose.ui.theme.ComposeTheme
 
 
@@ -55,13 +58,18 @@ class MainActivity : ComponentActivity() {
 //                        var selectedCiclo by remember { mutableStateOf("DAW") }
 //                        radiobuttonlistciclos(selectedCiclo, cicloselected, { selectedCiclo = it })
 //                    }
-                    ejercicioCardView(Modifier.padding(innerPadding))
+//                    ejercicioCardView(Modifier.padding(innerPadding))
+//                    mySurface(Modifier.padding(innerPadding))
+//                    myDropDownMenu(Modifier.padding(innerPadding)) //Ejemplo Menu Desplegable.
+                    ejercicioMenuDesplegable(Modifier.padding(innerPadding)) //Ejercicio Menu Desplegable.
 
 
                 }
             }
         }
     }
+
+
 
 
 }
