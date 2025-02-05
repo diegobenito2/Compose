@@ -10,6 +10,7 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -89,6 +90,7 @@ fun modulos(list: List<String>): String {
     var texto_Toast = remember { mutableStateOf("") }
 
     Column {
+//        var seleccionmodulo by remember { mutableStateMapOf<String,Boolean>() }
         list.forEach({ modulo ->
             var estado by remember { mutableStateOf(false) }
             Row(verticalAlignment = Alignment.CenterVertically) {
