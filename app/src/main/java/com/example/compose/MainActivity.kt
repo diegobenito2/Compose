@@ -4,19 +4,16 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Column
+
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
+
+import com.example.compose.Componentes.Slider.mySlider
+
 import com.example.compose.Componentes.Card.EjemploCard
 import com.example.compose.Componentes.Card.ejercicioCardView
 import com.example.compose.Componentes.CheckBox.ConEstados.MyTriStateCheckbox
@@ -26,6 +23,10 @@ import com.example.compose.Componentes.RadioButton.MyRadioButton
 import com.example.compose.Componentes.RadioButton.radioButtons
 import com.example.compose.Componentes.RadioButton.radiobuttonlist
 import com.example.compose.Componentes.RadioButton.radiobuttonlistciclos
+import com.example.compose.Componentes.Slider.myAdvancedSlider
+import com.example.compose.Componentes.Slider.mySlider
+import com.example.compose.Componentes.Slider.myadvancedSliderPreview
+import com.example.compose.Componentes.Slider.slidersColores
 import com.example.compose.Surface.mySurface
 import com.example.compose.ui.theme.ComposeTheme
 
@@ -61,16 +62,14 @@ class MainActivity : ComponentActivity() {
 //                    ejercicioCardView(Modifier.padding(innerPadding))
 //                    mySurface(Modifier.padding(innerPadding))
 //                    myDropDownMenu(Modifier.padding(innerPadding)) //Ejemplo Menu Desplegable.
-                    ejercicioMenuDesplegable(Modifier.padding(innerPadding)) //Ejercicio Menu Desplegable.
-
+//                    ejercicioMenuDesplegable(Modifier.padding(innerPadding)) //Ejercicio Menu Desplegable.
+                    mySlider(Modifier.padding(innerPadding))
+                    myAdvancedSlider(Modifier.padding(innerPadding))
+//                    slidersColores(Modifier.padding(innerPadding))
 
                 }
             }
         }
     }
-
-
-
-
 }
 
