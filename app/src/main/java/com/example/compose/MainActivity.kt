@@ -1,5 +1,6 @@
 package com.example.compose
 
+import com.example.compose.ui.theme.ComposeTheme
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,23 +13,11 @@ import androidx.compose.material3.Scaffold
 
 import androidx.compose.ui.Modifier
 
-import com.example.compose.Componentes.Slider.mySlider
-
-import com.example.compose.Componentes.Card.EjemploCard
-import com.example.compose.Componentes.Card.ejercicioCardView
-import com.example.compose.Componentes.CheckBox.ConEstados.MyTriStateCheckbox
-import com.example.compose.Componentes.DropDownMenu.ejercicioMenuDesplegable
-import com.example.compose.Componentes.DropDownMenu.myDropDownMenu
-import com.example.compose.Componentes.RadioButton.MyRadioButton
-import com.example.compose.Componentes.RadioButton.radioButtons
-import com.example.compose.Componentes.RadioButton.radiobuttonlist
-import com.example.compose.Componentes.RadioButton.radiobuttonlistciclos
-import com.example.compose.Componentes.Slider.myAdvancedSlider
-import com.example.compose.Componentes.Slider.mySlider
-import com.example.compose.Componentes.Slider.myadvancedSliderPreview
+import com.example.compose.Componentes.Dialogs.ejemploalertDialog
+import com.example.compose.Componentes.Dialogs.ejemplodialog
+import com.example.compose.Componentes.Dialogs.ejercicioDialog1
+import com.example.compose.Componentes.Dialogs.ejercicioDialog2
 import com.example.compose.Componentes.Slider.slidersColores
-import com.example.compose.Surface.mySurface
-import com.example.compose.ui.theme.ComposeTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -63,10 +52,13 @@ class MainActivity : ComponentActivity() {
 //                    mySurface(Modifier.padding(innerPadding))
 //                    myDropDownMenu(Modifier.padding(innerPadding)) //Ejemplo Menu Desplegable.
 //                    ejercicioMenuDesplegable(Modifier.padding(innerPadding)) //Ejercicio Menu Desplegable.
-                    mySlider(Modifier.padding(innerPadding))
-                    myAdvancedSlider(Modifier.padding(innerPadding))
+//                    mySlider(Modifier.padding(innerPadding))
+//                    myAdvancedSlider(Modifier.padding(innerPadding))
 //                    slidersColores(Modifier.padding(innerPadding))
-
+//                    ejemploalertDialog(Modifier.padding(innerPadding))
+//                    ejemplodialog(Modifier.padding(innerPadding)) // Ejemplo cuenta con propiedades para que no te puedas salir.
+//                    ejercicioDialog1(Modifier.padding(innerPadding))
+                    ejercicioDialog2(Modifier.padding(innerPadding))
                 }
             }
         }
