@@ -13,11 +13,7 @@ import androidx.compose.material3.Scaffold
 
 import androidx.compose.ui.Modifier
 
-import com.example.compose.Componentes.Dialogs.ejemploalertDialog
-import com.example.compose.Componentes.Dialogs.ejemplodialog
-import com.example.compose.Componentes.Dialogs.ejercicioDialog1
-import com.example.compose.Componentes.Dialogs.ejercicioDialog2
-import com.example.compose.Componentes.Slider.slidersColores
+import com.example.compose.Componentes.RecyclerView.MyRecyclerView
 
 
 class MainActivity : ComponentActivity() {
@@ -58,7 +54,8 @@ class MainActivity : ComponentActivity() {
 //                    ejemploalertDialog(Modifier.padding(innerPadding))
 //                    ejemplodialog(Modifier.padding(innerPadding)) // Ejemplo cuenta con propiedades para que no te puedas salir.
 //                    ejercicioDialog1(Modifier.padding(innerPadding))
-                    ejercicioDialog2(Modifier.padding(innerPadding))
+//                    ejercicioDialog2(Modifier.padding(innerPadding))
+                    MyRecyclerView(Modifier.padding(innerPadding))
                 }
             }
         }
