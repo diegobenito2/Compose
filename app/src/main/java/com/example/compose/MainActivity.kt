@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 
 import androidx.compose.ui.Modifier
+import com.example.compose.Componentes.RecyclerView.HeroeRecyclerView
 
 import com.example.compose.Componentes.RecyclerView.MyRecyclerView
 
@@ -55,7 +56,8 @@ class MainActivity : ComponentActivity() {
 //                    ejemplodialog(Modifier.padding(innerPadding)) // Ejemplo cuenta con propiedades para que no te puedas salir.
 //                    ejercicioDialog1(Modifier.padding(innerPadding))
 //                    ejercicioDialog2(Modifier.padding(innerPadding))
-                    MyRecyclerView(Modifier.padding(innerPadding))
+//                    MyRecyclerView(Modifier.padding(innerPadding))
+                    HeroeRecyclerView(Modifier.padding(innerPadding))
                 }
             }
         }
