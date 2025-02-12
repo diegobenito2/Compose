@@ -1,6 +1,6 @@
 package com.example.compose.Componentes.RecyclerView
 
-data class SuperHeroe(
+data class HeroeData(
     val photo: Int,
     val publisher: String,
     val realName: String,

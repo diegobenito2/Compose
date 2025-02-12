@@ -14,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.compose.Componentes.RecyclerView.HeroeRecyclerView
 import com.example.compose.Componentes.RecyclerView.HeroeRecyclerView2
+import com.example.compose.Componentes.RecyclerView.MovieRecyclerView
 
 import com.example.compose.Componentes.RecyclerView.MyRecyclerView
 
@@ -58,8 +59,9 @@ class MainActivity : ComponentActivity() {
 //                    ejercicioDialog1(Modifier.padding(innerPadding))
 //                    ejercicioDialog2(Modifier.padding(innerPadding))
 //                    MyRecyclerView(Modifier.padding(innerPadding))
-//                    HeroeRecyclerView(Modifier.padding(innerPadding))
-                    HeroeRecyclerView2(Modifier.padding(innerPadding))
+//                    HeroeRecyclerView(Modifier.padding(innerPadding)) // Recyclerview grill con boton para volver arriba
+//                    HeroeRecyclerView2(Modifier.padding(innerPadding)) //Sticky Header Agrupaciones.
+                    MovieRecyclerView(Modifier.padding(innerPadding))
                 }
             }
         }

@@ -1,6 +1,9 @@
+
+
 package com.example.compose.Componentes.RecyclerView
 
 import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -21,10 +24,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.compose.R
 
 
@@ -37,66 +42,7 @@ fun HeroeRecyclerView(modifier: Modifier) {
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             content = {
                 items(
-                    items = listOf(
-                        SuperHeroe(
-                            photo = R.drawable.spiderman,
-                            publisher = "Marvel",
-                            realName = "Peter Parker",
-                            superheroeName = "Spider-Man"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.batman,
-                            publisher = "DC",
-                            realName = "Bruce Wayne",
-                            superheroeName = "Batman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.superman,
-                            publisher = "DC",
-                            realName = "Clark Kent",
-                            superheroeName = "Superman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.ironman,
-                            publisher = "Marvel",
-                            realName = "Tony Stark",
-                            superheroeName = "Iron Man"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.wonderman,
-                            publisher = "DC",
-                            realName = "Diana Prince",
-                            superheroeName = "Wonder Woman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.capitanamerica,
-                            publisher = "Marvel",
-                            realName = "Steve Rogers",
-                            superheroeName = "Captain America"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.deadpool,
-                            publisher = "Marvel",
-                            realName = "Wade Wilson",
-                            superheroeName = "Deadpool"
-                        ), SuperHeroe(
-                            photo = R.drawable.wolverine,
-                            publisher = "Marvel",
-                            realName = "James Howlett (Logan)",
-                            superheroeName = "Wolverine"
-                        ), SuperHeroe(
-                            photo = R.drawable.thor,
-                            publisher = "Marvel",
-                            realName = "Thor Odinson",
-                            superheroeName = "Thor"
-                        ), SuperHeroe(
-                            photo = R.drawable.hulk,
-                            publisher = "Marvel",
-                            realName = "Robert Bruce Banner",
-                            superheroeName = "Hulk"
-                        )
-
-                    )
+                    items = getHeroes()
                 ) { superheroe ->
                     itemHeroe(superheroe = superheroe) {
                         Toast.makeText(
@@ -112,90 +58,29 @@ fun HeroeRecyclerView(modifier: Modifier) {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HeroeRecyclerView2(modifier: Modifier) {
     val context = LocalContext.current
+    val heroes = getHeroes().groupBy { it.publisher }
     Column(modifier = modifier) {
-        LazyColumn(verticalArrangement = Arrangement.spacedBy(4.dp),
-            content = {
-                items(
-                    items = listOf(
-                        SuperHeroe(
-                            photo = R.drawable.spiderman,
-                            publisher = "Marvel",
-                            realName = "Peter Parker",
-                            superheroeName = "Spider-Man"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.batman,
-                            publisher = "DC",
-                            realName = "Bruce Wayne",
-                            superheroeName = "Batman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.superman,
-                            publisher = "DC",
-                            realName = "Clark Kent",
-                            superheroeName = "Superman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.ironman,
-                            publisher = "Marvel",
-                            realName = "Tony Stark",
-                            superheroeName = "Iron Man"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.wonderman,
-                            publisher = "DC",
-                            realName = "Diana Prince",
-                            superheroeName = "Wonder Woman"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.capitanamerica,
-                            publisher = "Marvel",
-                            realName = "Steve Rogers",
-                            superheroeName = "Captain America"
-                        ),
-                        SuperHeroe(
-                            photo = R.drawable.deadpool,
-                            publisher = "Marvel",
-                            realName = "Wade Wilson",
-                            superheroeName = "Deadpool"
-                        ), SuperHeroe(
-                            photo = R.drawable.wolverine,
-                            publisher = "Marvel",
-                            realName = "James Howlett (Logan)",
-                            superheroeName = "Wolverine"
-                        ), SuperHeroe(
-                            photo = R.drawable.thor,
-                            publisher = "Marvel",
-                            realName = "Thor Odinson",
-                            superheroeName = "Thor"
-                        ), SuperHeroe(
-                            photo = R.drawable.hulk,
-                            publisher = "Marvel",
-                            realName = "Robert Bruce Banner",
-                            superheroeName = "Hulk"
-                        )
-
+        LazyColumn(verticalArrangement = Arrangement.spacedBy(4.dp)){
+            heroes.forEach { publisher, heroe ->
+                stickyHeader {
+                    Text(
+                        text = publisher, modifier = Modifier.fillMaxWidth(), fontSize = 16.sp, color = Color.White
                     )
-                ) { superheroe ->
-                    itemHeroe(superheroe = superheroe) {
-                        Toast.makeText(
-                            context,
-                            superheroe.superheroeName,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
                 }
-            })
-
-
+                items(heroe){
+                    itemHeroe(superheroe = it) {Toast.makeText(context,it.superheroeName,Toast.LENGTH_SHORT).show() }
+                }
+            }
+        }
     }
 }
 
 @Composable
-fun itemHeroe(superheroe: SuperHeroe, onItemSelected: (SuperHeroe) -> Unit) {
+fun itemHeroe(superheroe: HeroeData, onItemSelected: (HeroeData) -> Unit) {
     Card(
         Modifier
             .width(400.dp)
