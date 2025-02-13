@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
@@ -29,10 +30,11 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun MovieRecyclerView(modifier: Modifier) {
+    val MovieList = getMovieList()
     val rvState = rememberLazyListState()
     Column(modifier) {
         val showButtondown by remember { derivedStateOf { rvState.firstVisibleItemIndex > 0 } }
-        val showButtonup by remember { derivedStateOf { rvState.firstVisibleItemIndex < getMovieList().size - 1 } }
+        val showButtonup by remember { derivedStateOf { rvState.firstVisibleItemIndex < getMovieList().size - 2 } }
         val corutines = rememberCoroutineScope()
         Row {
             if (showButtonup) {
@@ -43,6 +45,7 @@ fun MovieRecyclerView(modifier: Modifier) {
                         .padding(16.dp)
                         .weight(1f)
                 ) { Text(text = "Ir abajo") }
+
             }
         }
         LazyColumn(
@@ -51,7 +54,7 @@ fun MovieRecyclerView(modifier: Modifier) {
                 .weight(1f)
                 .align(Alignment.CenterHorizontally)
         ) {
-            items(getMovieList()) {
+            items(MovieList) {
                 itemMovie(movie = it)
             }
         }
