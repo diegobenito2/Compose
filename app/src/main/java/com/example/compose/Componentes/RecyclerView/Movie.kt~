@@ -74,7 +74,7 @@ fun MovieRecyclerView(modifier: Modifier) {
                     text = "Ir abajo",
                     isScrollUp = false,
                     rvState = rvState,
-                    targetIndex = getMovieList().size - 1,
+                    targetIndex = getMovieList().size -1 ,
                     modifier = Modifier
                         .align(Alignment.CenterVertically)
                         .padding(16.dp)

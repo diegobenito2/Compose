@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 
 import androidx.compose.ui.Modifier
+import com.example.compose.Componentes.DropDownMenu.myDropDownMenu
 import com.example.compose.Componentes.RecyclerView.HeroeRecyclerView
 import com.example.compose.Componentes.RecyclerView.HeroeRecyclerView2
 import com.example.compose.Componentes.RecyclerView.MovieRecyclerView
